@@ -64,3 +64,4 @@ python3 -m http.server 8000
 
 Oppdatert 1. november 2026: Hovedbilde BELLAMORK_261029-5.jpeg med tekst nederst til venstre i varm elfenben (#fff4df), over en mørk gradering. Musikerportretter og CV for Karin Hannisdal og Lars Henrik Johansen er lagt til. Susannes CV avventer tekst. De to eksisterende WAV-filene følger med.
 # ensemblexvii
+# ensemblexvii
