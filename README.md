@@ -1,67 +1,83 @@
-# Ensemble · XVII — nettside
+<div align="center">
 
-En statisk, responsiv nettside for et ensemble med sopran, viola da gamba og cembalo. Klar for GitHub Pages. Ingen byggeverktøy eller JavaScript kreves.
+# ENSEMBLE · XVII
 
-## 1. Legg inn egne filer
+### *L’art de toucher le cœur*
 
-Bytt ut plassholderfilene ved å legge inn følgende **eksakte filnavn**:
+Fransk kammermusikk fra slutten av 1600-tallet  
+Sopran · Viola da gamba · Cembalo
 
-- `assets/images/ensemble-1.jpg` — hovedbilde (helst liggende, minst 1800 px bredt)
-- `assets/images/ensemble-2.jpg` — stort galleribilde
-- `assets/images/ensemble-3.jpg` — galleribilde
-- `assets/images/ensemble-4.jpg` — galleribilde
-- `assets/audio/bernier-diane-sats-2.mp3` — Bernier, *Diane*, andre sats
-- `assets/audio/la-barre-esperance.mp3` — La Barre, *Si c’est un bien que l’espérance*
+— ✦ —
 
-Før filene er lagt inn, vil bildene ikke vises og lydspillerne ikke kunne spille av. Bilder og lyd følger **ikke** med i pakken.
+**Susanne Mørk** · **Karin Hannisdal** · **Lars Henrik Johansen**
 
-## 2. Tilpass tekst
+</div>
 
-Åpne `index.html` og erstatt:
-- `ENSEMBLE · XVII` med ensemblets virkelige navn (to steder, samt sidetittelen)
-- `[Legg gjerne inn navnene ...]` med navn og eventuelt biografier
-- `kontakt@example.com` med riktig e-postadresse (både lenke og synlig tekst)
-- Bildetekster og beskrivende alt-tekster slik at de passer bildene
+## Musikk, poesi og retorikk
 
-Sitatet nederst er **ikke** et dokumentert historisk sitat og er derfor satt som en generell inspirasjonstekst. Erstatt eller fjern det hvis ønskelig.
+Ved det franske hoffet på slutten av 1600-tallet møttes poesi og musikk i en kunstform der hver gest, hver dissonans og hver ornamentering bar mening.
 
-## 3. Publiser på GitHub Pages
+Ensemble XVII utforsker denne intime musikken med sopran, viola da gamba og cembalo — dens klanglige nyanser, dramatiske kontraster og særegne forbindelse mellom ord og tone.
 
-Opprett et nytt **public** GitHub-repository, for eksempel `ensemble-xvii`. Legg filene i repository-roten (ikke selve `barokktrio`-mappen rundt dem):
+Dette repositoriet inneholder ensemblets nettside: en presentasjon av musikerne, utvalgte innspillinger og fotografier fra Frogner hovedgård.
 
-```bash
-git init
-git add .
-git commit -m "Initial ensemble website"
-git branch -M main
-git remote add origin https://github.com/BRUKERNAVN/ensemble-xvii.git
-git push -u origin main
+## Et rom for musikken
+
+Nettsidens uttrykk henter farger fra fotografiene: varm elfenben, dempede gulltoner og dyp grønn. Store bilder, luftige tekstflater og den klassiske antikvaskriften *Cormorant Garamond* gir musikken en rolig ramme. *DM Sans* brukes til navigasjon og mindre tekster.
+
+Nettsiden er laget med HTML og CSS, med tilpasninger for mobil, nettbrett og større skjermer. Lydopptakene spilles av med nettleserens innebygde lydspiller. Ingen installasjon eller bygging er nødvendig.
+
+## Repertoaret på siden
+
+| Komponist | Verk |
+| :--- | :--- |
+| Joseph Chabanceau de La Barre | *Si c’est un bien que l’espérance* |
+| Nicolas Bernier | Andre sats fra kantaten *Diane* |
+
+## Arbeide med nettsiden
+
+Åpne `index.html` i en nettleser for en enkel forhåndsvisning. Skriftene lastes fra Google Fonts og krever internettilgang; uten tilkobling brukes reserveskrifter.
+
+De sentrale filene er:
+
+```text
+.
+├── index.html          Nettsidens innhold og struktur
+├── styles.css          Typografi, farger og layout
+├── .nojekyll           Lar GitHub Pages servere filene direkte
+└── assets/
+    ├── images/         Ensemblebilder, portretter og interiører
+    └── audio/          Lydopptak
 ```
 
-På GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**. Velg `main` og `/ (root)` og lagre.
+**Tekster og kontaktinformasjon** redigeres i `index.html`. Kontaktfeltet inneholder foreløpig `kontakt@example.com`; erstatt både den synlige adressen og adressen i `mailto:`-lenken før siden tas i bruk.
 
-Adressen blir normalt `https://BRUKERNAVN.github.io/ensemble-xvii/`.
+**Utseendet** redigeres i `styles.css`. Fargevariablene ligger i `:root` øverst i filen. Hovedbildet er angitt som bakgrunnsbilde i CSS, mens portrettene og galleribildene er angitt i HTML.
 
-GitHub Pages serverer statiske filer direkte. Sørg for at du har rettigheter til å publisere fotografiene og lydopptakene. Store MP3-filer kan påvirke lasting og repository-størrelse.
+**Bilder og lyd** legges i de tilhørende undermappene. Oppdater filstiene når filnavn endres, og behold beskrivende alternativ tekst for bildene.
 
-## 4. Lokal forhåndsvisning
+## Publisering
 
-Kjør i mappen:
+Siden kan publiseres som et statisk nettsted, blant annet med GitHub Pages. Ved publisering fra en gren skal mappen med `index.html`, `styles.css` og `assets/` brukes som nettstedets rot.
+
+Fra prosjektmappen kan endringer lagres og lastes opp slik:
 
 ```bash
-python3 -m http.server 8000
+git add index.html styles.css assets/ README.md
+git commit -m "Oppdater nettsiden"
+git push origin main
 ```
 
-Åpne `http://localhost:8000` i nettleseren.
+## Fotografier og kreditering
 
-## Design
+Ensemblebilder og musikerportretter: **Bella Mørk**. Fotograferingen er gjort på **Frogner hovedgård**.
 
-- Typografi: Cormorant Garamond (tynn serif) + DM Sans (navigasjon og brødtekst), lastes fra Google Fonts.
-- Farger: varm elfenben, dempet gull og mørk grønn.
-- Responsivt oppsett, tastaturnavigasjon, hopp-til-innhold, semantiske overskrifter og innebygde HTML5-lydspillere.
-- Nettstedet virker uten JavaScript. Fontene faller tilbake til lokale standardfonter hvis Google Fonts ikke kan nås.
+Interiørbildene har egne kilder og krediteringer som må ivaretas ved videre bruk. Repositoriet gir i seg selv ingen tillatelse til å gjenbruke fotografier, innspillinger eller annet innhold.
 
+---
 
-Oppdatert 1. november 2026: Hovedbilde BELLAMORK_261029-5.jpeg med tekst nederst til venstre i varm elfenben (#fff4df), over en mørk gradering. Musikerportretter og CV for Karin Hannisdal og Lars Henrik Johansen er lagt til. Susannes CV avventer tekst. De to eksisterende WAV-filene følger med.
-# ensemblexvii
-# ensemblexvii
+<div align="center">
+
+*En stemme. To instrumenter. Et felles uttrykk.*
+
+</div>
